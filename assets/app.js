@@ -20,12 +20,12 @@ $(".col-md-9").each(function(){
 });
 
 //Retrieving events from local storage
-function saveTodos(){
+(function saveTodos(){
     $(".todo").each(function(){
         var inputId = $(this).attr("id");
         $(this).val(localStorage.getItem(inputId));
     });
-};
+}());
 
 //Saving events into local storage
 $(".saveBtn").click(function(){
@@ -34,16 +34,19 @@ $(".saveBtn").click(function(){
     localStorage.setItem(inputsLocation,scheduleInputs);
 });
 
+// Delete events from textarea and localstorage individually 
 $(".delBtn").click(function(){
-    var ask = confirm("Are you sure you want to delete this event?");
-    if(ask){
-        $(this).siblings(".todo").val("");
-        localStorage.removeItem($(this).siblings(".todo").attr("id"));
-    }else{
+    if($(this).siblings(".todo").val() !== ""){
+       
+        // if the text area is empty confirm the user wants to delete the event
+        var ask = confirm("Are you sure you want to delete this event?");
+        if(ask){
+            $(this).siblings(".todo").val("");
+            localStorage.removeItem($(this).siblings(".todo").attr("id"));
+        }else{
+            return;
+        }
+    } else {
         return;
     }
 });
-
-
-
-saveTodos();
