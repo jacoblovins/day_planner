@@ -5,7 +5,7 @@ var hourNum = parseInt(hourString);
 $("#currentDay").text(moment().format('dddd, MMM Do'));
 
 // Compare the current hour with each of the timeblock's hours
-$(".col-md-10").each(function(){
+$(".col-md-9").each(function(){
     var dataTime = $(this).attr("id");
     var dataNum = parseInt(dataTime);
     
@@ -19,7 +19,7 @@ $(".col-md-10").each(function(){
     } 
 });
 
-//Rendering stored inputs after page refresh
+//Retrieving events from local storage
 function saveTodos(){
     $(".todo").each(function(){
         var inputId = $(this).attr("id");
@@ -27,11 +27,23 @@ function saveTodos(){
     });
 };
 
-//Click event to save user input in local storage
+//Saving events into local storage
 $(".saveBtn").click(function(){
     var scheduleInputs = $(this).siblings(".todo").val();
     var inputsLocation = $(this).siblings(".todo").attr("id");
     localStorage.setItem(inputsLocation,scheduleInputs);
 });
+
+$(".delBtn").click(function(){
+    var ask = confirm("Are you sure you want to delete this event?");
+    if(ask){
+        $(this).siblings(".todo").val("");
+        localStorage.removeItem($(this).siblings(".todo").attr("id"));
+    }else{
+        return;
+    }
+});
+
+
 
 saveTodos();
