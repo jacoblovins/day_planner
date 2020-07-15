@@ -10,6 +10,9 @@ body {
   border-radius: 0;
   border-bottom: 10px solid black;
 }
+.container {
+  margin-bottom: 20px;
+}
 
 /* Time Blocks */
 .row {
@@ -70,6 +73,7 @@ textarea {
   transition: all .3s ease-in-out;
 }
 
+/* Responsive changes */
 @media screen and (max-width: 768px) {
   .row {
     height: auto;
@@ -84,21 +88,17 @@ textarea {
     border: none;
     border-bottom: 1px solid black;
   }
-
   textarea {
     text-align: center;
     border-left: none;
   }
-
   .delBtn {
     border-left: none;
   }
-  
   .saveBtn {
     border-top-right-radius: .25rem;
     border-bottom-right-radius: .25rem;
     border-left: none;
-
   }
 }
 
