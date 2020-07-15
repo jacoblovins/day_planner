@@ -3,7 +3,27 @@ body {
   font-size: 16px;
   line-height: 1;
 }
+.jumbotron {
+  text-align: center;
+  background-color: transparent;
+  color: black;
+  border-radius: 0;
+  border-bottom: 10px solid black;
+}
 
+/* Time Blocks */
+.row {
+  white-space: pre-wrap;
+  height: 80px;
+  border-top: 1px solid white;;
+  text-align: center;
+  border-radius: 15px;
+}
+.hour {
+  background-color: #ffffff;
+  color: #000000;
+  border-top: 1px dashed #000000;
+}
 textarea {
   background: transparent;
   border: none;
@@ -13,50 +33,32 @@ textarea {
   padding: 10px;
 }
 
-.jumbotron {
-  text-align: center;
-  background-color: transparent;
-  color: black;
-  border-radius: 0;
-  border-bottom: 10px solid black;
-}
-
-.description{
-  white-space: pre-wrap;
-}
-
-.time-block{
-  text-align: center;
-  border-radius: 15px;
-}
-
-.row {
-  white-space: pre-wrap;
-  height: 80px;
-  border-top: 1px solid white;;
-}
-
-.hour {
-  background-color: #ffffff;
-  color: #000000;
-  border-top: 1px dashed #000000;
-}
-
+/* Color change based on time */
 .past {
   background-color: #d3d3d3;
   color: black;
 }
-
 .present {
   background-color: #ff6961;
   color: black;
 }
-
 .future {
   background-color: #77dd77;
   color: black;
 }
 
+/* Delete Buttons */
+.delBtn {
+  border-left: 1px solid black;
+  background-color: rgb(193, 91, 84);
+  color: white;
+}
+.delBtn i:hover {
+  font-size: 30px;
+  transition: all .3s ease-in-out;
+}
+
+/* Save Buttons */
 .saveBtn {
   border-left: 1px solid black;
   border-top-right-radius: 15px;
@@ -64,19 +66,8 @@ textarea {
   background-color: #06AED5;
   color: white;
 }
-
 .saveBtn i:hover {
   font-size: 30px;
   transition: all .3s ease-in-out;
 }
 
-.delBtn {
-  border-left: 1px solid black;
-  background-color: rgb(193, 91, 84);
-  color: white;
-  
-}
-.delBtn i:hover {
-  font-size: 30px;
-  transition: all .3s ease-in-out;
-}
