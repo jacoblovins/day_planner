@@ -60,7 +60,6 @@ textarea {
 
 /* Save Buttons */
 .saveBtn {
-  border-left: 1px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   background-color: #06AED5;
@@ -69,5 +68,37 @@ textarea {
 .saveBtn i:hover {
   font-size: 30px;
   transition: all .3s ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+  .row {
+    height: auto;
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+  .hour {
+    margin-top: 3%;
+    padding-bottom: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-bottom: 1px solid black;
+  }
+
+  textarea {
+    text-align: center;
+    border-left: none;
+  }
+
+  .delBtn {
+    border-left: none;
+  }
+  
+  .saveBtn {
+    border-top-right-radius: .25rem;
+    border-bottom-right-radius: .25rem;
+    border-left: none;
+
+  }
 }
 
