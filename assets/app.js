@@ -25,7 +25,7 @@ $(".col-md-9").each(function(){
         var inputId = $(this).attr("id");
         $(this).val(localStorage.getItem(inputId));
     });
-}());
+})();
 
 //Saving events into local storage
 $(".saveBtn").click(function(){

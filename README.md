@@ -4,10 +4,10 @@ This day planner utilizes Moment.js, JQuery, Bootstrap, FontAwesome, functions, 
 
 [Click Here to check it out!](https://jacoblovins.github.io/day_planner/)
 
-![Alt text](images/start_screen.png "Title")
+Full Screen:
 
+![Alt text](assets/images/full.png "Title")
 
-![Alt text](images/questions.png "Title")
+Small Screens:
 
-
-![Alt text](images/highScores.png "Title")
+![Alt text](assets/images/mobile.png "Title")
