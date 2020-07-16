@@ -9,6 +9,8 @@ function hourLabel(i) {
     var timeOfDay = "";
     if (i < 12) {
         timeOfDay = i + "am";
+    } else if(i > 12){
+        timeOfDay = (i-12) + "pm"
     } else {
         timeOfDay = i + "pm";
     }
