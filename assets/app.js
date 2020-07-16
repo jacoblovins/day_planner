@@ -62,10 +62,12 @@ $(".saveBtn").click(function () {
 
 // Delete events from textarea and localstorage individually 
 $(".delBtn").click(function () {
+    
+    // If the text area is not empty confirm the user wants to delete the event
     if ($(this).siblings(".todo").val() !== "") {
-
-        // if the text area is empty confirm the user wants to delete the event
         var ask = confirm("Are you sure you want to delete this event?");
+        
+        // If user confirms, clear text area and clear item from local storage
         if (ask) {
             $(this).siblings(".todo").val("");
             localStorage.removeItem($(this).siblings(".todo").attr("id"));
