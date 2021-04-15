@@ -15,7 +15,7 @@ function hourLabel(i) {
         timeOfDay = i + "pm";
     }
     return timeOfDay;
-}
+} 
 
 // Set time blocks
 for (var i = 9; i <= 17; i++) {
