@@ -3,7 +3,7 @@ var hourNum = parseInt(hourString);
 
 // Add current date to the top of the page
 $("#currentDay").text(moment().format('dddd, MMM Do'));
-
+  
 // Get hour and am or pm for time block label
 function hourLabel(i) {
     var timeOfDay = "";
