@@ -16,7 +16,7 @@ function hourLabel(i) {
     }
     return timeOfDay;
 } 
-
+ 
 // Set time blocks
 for (var i = 9; i <= 17; i++) {
     var blockRow = $('<div class="row">');
