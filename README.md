@@ -10,4 +10,4 @@ Full Screen:
 
 Small Screens:
 
-![Alt text](assets/images/mobile.png "Title")    
+![Alt text](assets/images/mobile.png "Title")      
